@@ -1,6 +1,6 @@
 <?php
 
-$EMAIL_FROM = "info@icpc-3.info";
+$EMAIL_FROM = "your@email.adress";
 $EMAIL_SUBJECT = "ICPC secureEHR";
 $EMAIL_GREETINGS = "Kind Regards,\nICPC secureEHR\n";
 
@@ -10,7 +10,7 @@ define("DB_USER", 1);
 define("DB_PASSWORD", 2);
 
 define("DBASES", array(
-    "praxis1" => array("icpc_3_info_emr", "icpc_3_info_emr", "k8dh5hzgVdDU1QOE"),
+    "praxis1" => array("<dbase_name>", "<dbase_user>", "<dbase_password>"),
 ));
 
 ?>
