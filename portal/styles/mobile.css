@@ -1,0 +1,179 @@
+:root {
+    --background: #ddd;
+    --bg-header: #ccc;
+    --bg-header2: #999;
+    --text-color: #222;
+    --text-shadow: #fff;
+    --bg-searchbar: white;
+    --text-searchbar: black;
+    --bg-results: #FFFFFF;
+    --bg-details: #FFFFFF;
+    --link-color: darkblue;
+}
+
+[theme="dark"] {
+    --background: black;
+    --bg-header: #888;
+    --bg-header2: #444;
+    --text-color: #ddd;
+    --text-shadow: #222;
+    --bg-searchbar: #222;
+    --text-searchbar: white;
+    --bg-results: #222;
+    --bg-details: #222;
+    --link-color: lightblue;
+}
+
+a {
+    color: var(--link-color);
+}
+
+body {
+    background-color: var(--background); /*#ddd;  Background color */
+    color: var(--text-color); /* Foreground color used for text */
+    font-family: Helvetica;
+    font-size: 14px;
+    margin: 0; /* Amount of negative space around the outside of the body */
+    padding: 0; /* Amount of negative space around the  inside of the body */
+}
+
+.header {
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    height: 40px;
+    width: 100%;
+    color: var(--text-color);
+    background-color: var(--bg-header);
+    border-bottom: 1px solid #666;
+    background-repeat: none;
+}
+
+.header h1 {
+    display: block;
+    line-height: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0px 1px 1px var(--text-shadow);
+}
+
+#installAsApp {
+    position: absolute;
+    display: none;
+    top: 22px;
+    right: 40px;
+    height: 32px;
+    z-index: 5;
+    box-shadow: 8px 8px 3px black;
+}
+
+#updateInfo {
+    position: absolute;
+    bottom: 2px;
+    right: 250px;
+    height: 32px;
+    width: 200px;
+    z-index: 5;
+    box-shadow: 8px 8px 3px black;
+}
+
+#clearInfo {
+    position: absolute;
+    bottom: 2px;
+    right: 40px;
+    height: 32px;
+    width: 200px;
+    z-index: 5;
+    box-shadow: 8px 8px 3px black;
+}
+
+#mainContent {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#buttons {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+    display: inline;
+    border-style: none;
+    border-width: 1px 1px 0px 1px;
+}
+
+#buttons ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    overflow: hidden;
+}
+
+#buttons ul li {
+    float: left;
+    width: 80px;
+    text-align: center;
+    color: darkgreen;
+    background-color: lightgreen;
+    cursor: pointer;
+    padding: 2px;
+    margin-right: 10px;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+#buttons ul li[selected] {
+    background-color: darkgreen;
+    color: lightgreen;
+}
+
+.information {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background-color: darkgreen;
+    color: lightgreen;
+}
+
+.information ul {
+    list-style: none;
+}
+
+#patientInfo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 99%;
+    height: 99%;
+    background-color: darkgreen;
+    color: lightgreen;
+}
+
+#loginWindow {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    height: 100px;
+    width: 280px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 8px 8px 3px darkgreen;
+    background-color: lightgreen;
+}
+
+#loginButton {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}

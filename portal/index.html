@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ICPC-3 secureEHR Portal</title>
+    <meta charset="utf-8">
+    <meta name="description" content="ICPC-3 secureEHR Patient Portal" />
+    <meta name="author" content="Egbert van der Haring" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#005070"/>
+    <meta property="og:image" content="images/logo-192.png" />
+    <link rel="apple-touch-icon" href="images/logo-192.png">
+    <link rel="stylesheet" href="styles/mobile.css" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico">
+	<link rel="manifest" href="icpc_ehr.webmanifest">
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="module" src="scripts/mobile.js"></script>
+</head>
+<body>
+    <div id="mainPage">
+        <div id="mainHeader" class="header">
+            <h1>ICPC-3 secureEHR Portal</h1>
+            <button id="installAsApp">Install</button>
+        </div>
+        <div id="aboutText" style="display:none">
+            <h3>ICPC-3 secureEHR Portal Information</h3>
+            <p>This website functions best on a smartphone. Just install it on your home screen.</p>
+            <p>Written by Egbert van der Haring, &copy;2022<br/>
+            Contact: info@eggbird.eu
+            </p>
+        </div>
+        <div id="mainContent" class="content">
+            <div id="buttons">
+                <ul>
+                    <li id="buttonPatient" class="button" selected="true">Patient</li>
+                    <li id="buttonDiagnoses" class="button">Diagnoses</li>
+                    <li id="buttonMedication" class="button">Medication</li>
+                    <li id="buttonLaboratory" class="button">Laboratory</li>
+                </ul>
+            </div>
+            <div id="patient" class="information"><textarea id="patientInfo" readonly></textarea></div>
+            <div id="diagnoses" class="information" style="display:none"></div>
+            <div id="medication" class="information" style="display:none"></div>
+            <div id="laboratory"  class="information" style="display:none"></div>
+        </div>
+        <button id="updateInfo">Update</button>
+        <button id="clearInfo">Clear</button>
+    </div>
+</body>
+</html>
+

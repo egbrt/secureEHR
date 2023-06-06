@@ -1,0 +1,117 @@
+#icpc3-browser {
+    position: absolute;
+    display: none;
+    top: 20px;
+    left: 34%;
+    right: 20px;
+    bottom: 5px;
+    background: white;
+    z-index: 5;
+    background: white;
+	border-width:1px;
+	border-style:solid;
+	box-shadow: 5px 5px 3px darkgreen;
+}
+
+#icpc3-legend {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+#icpc3-results {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    bottom: 20px;
+    overflow: auto;
+	border-right-width: 1px;
+	border-right-style: solid;
+}
+
+#icpc3-results ul li[subcode] {
+    margin-left: 20px;
+}
+
+#icpc3-details {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 51%;
+    right: 5px;
+    bottom: 0px;
+    overflow: auto;
+}
+
+#icpc3-details p.rubrickind {
+    font-style: italic;
+    margin-top: 1em;
+}
+
+#icpc3-details p.extensionPreferred {
+    margin-left: 10px;
+}
+
+#icpc3-details p.extensionDescription {
+    margin-left: 20px;
+}
+
+#icpc3-details p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#icpc3-epdTexts {
+    position: absolute;
+    top: 0px;
+    left: 51%;
+    right: 5px;
+    bottom: 0px;
+    border-width: 1px;
+    border-style: solid;
+	box-shadow: 5px 5px 3px darkgreen;
+    background-color: white;
+    overflow: auto;
+}
+
+#icpc3-epdTexts ul li.selected {
+    font-weight: bold;
+}
+
+#icpc3-codingHint {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    left: 10px;
+    width: 50%;
+    height: 80px;
+    bottom: 20px;
+    border-width:1px;
+    border-style:solid;
+	box-shadow:10px 10px 5px #888888;
+    background-color: red;
+    padding: 10px;
+    z-index: 4;
+}
+
+#icpc3-hideDescription {
+     margin-top: 1px;
+     margin-right: 2px;
+     position:absolute;
+     top:0;
+     right:0;
+ }
+
+p.tab1 {
+    margin-top:0px;
+    margin-left:20px;
+    margin-bottom:0px;
+}
+
+p.tab2 {
+    margin-top:0px;
+    margin-left:40px;
+    margin-bottom:0px;
+}
+
