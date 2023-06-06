@@ -18,7 +18,7 @@
         <li><a href="https://jquery.com" target="blank">jQuery</a></li>
     </ul>
     <h3>Source code</h3>
-    <p>Download the source for ICPC secureEHR. Coming soon.</p>
+    <p>The source for ICPC secureEHR can be found at <a href="https://github.com/egbrt/secureEHR" target="_blank">github</a>.</p>
     <h3>What do I need to use ICPC secureEHR?</h3>
     <p>The software contains the backend of the ICPC secureEHR which should run on a <a href="https://en.wikipedia.org/wiki/Web_server" target-"_blank">web server<a/> that supports <a href="https://en.wikipedia.org/wiki/MySQL" target="_blank">MySQL</a>. The frontend of ICPC secureEHR is any (modern) <a href="https://en.wikipedia.org/wiki/Web_browser" target="_blank">web browser<a/>.<br/>
     Here a number of <a href="scenarios.php" target="_blank">possible scenarios</a> to run ICPC secureEHR.</p>
