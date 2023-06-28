@@ -257,7 +257,6 @@ export class Contact {
         
         let heading = "unknown";
         $('#visitAllFindings ul li').each(function() {
-            console.log($(this).html());
             if ($(this).hasClass("heading")) {
                 heading = $(this).html();
             }

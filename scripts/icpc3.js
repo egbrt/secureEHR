@@ -26,6 +26,7 @@ export class ICPC3 {
         this.currentMode = RFE;
         this.currentCode = "";
         this.previousSearchText = "";
+        this.modifiers = "";
     }
     
     close()
@@ -66,6 +67,13 @@ export class ICPC3 {
         }
         else {
             let icpc3 = this;
+            icpc3.modifiers = "";
+            let i = text.indexOf(':');
+            if (i > 0) {
+                icpc3.modifiers = text.substr(i+1).trim();
+                text = text.substr(0, i);
+            }
+            
             $("#icpc3-epdTexts").html("");
             $("#icpc3-results").html("Searching for \"" + text + "\", please wait....");
             $.ajax ({
@@ -153,7 +161,6 @@ export class ICPC3 {
             $("#icpc3-browser").show();
             
             let icpc3 = this;
-            console.log(icpc3);
             $("#icpc3-results ul li").click(function() {
                 $('#icpc3-results ul li.selected').removeClass('selected');
                 $(this).addClass('selected');
@@ -163,11 +170,17 @@ export class ICPC3 {
                 }
                 else {
                     icpc3.showDetails(this.id);
-                    $('#visitAllFinding').val($(this).html());
+                    /*
+                    let newText = $(this).html();
+                    if (icpc3.modifiers != "") newText += " : " + icpc3.modifiers;
+                    $('#visitAllFinding').val(newText);
+                    */
                 }
             });
             $("#icpc3-results ul li").dblclick(function() {
-                icpc3.dashboard.contact.add($(this).html());
+                let newText = $(this).html();
+                if (icpc3.modifiers != "") newText += " : " + icpc3.modifiers;
+                icpc3.dashboard.contact.add(newText);
                 $('#visitAllFinding').val('').focus();
             });
         }
@@ -313,7 +326,7 @@ export class ICPC3 {
         
         $("#icpc3-epdTexts").html("<p class=\"subHeader\">Description and/or inclusions (double-click to add to contact)</p>" + description + epdTexts);
         $("#icpc3-epdTexts ul li[id=1]").addClass('selected');
-        $("#visitAllFinding").val(this.currentCode + ' ' + $("#icpc3-epdTexts ul li.selected").html());
+        $("#visitAllFinding").val(this.getSelectedEpdText());
         
         $('#icpc3-epdTexts ul li').click(function() {
             if (this.id) {
@@ -395,6 +408,11 @@ export class ICPC3 {
         $(".possibleExtension").each(function() {
             if (this.checked) text += ": " + $(this).attr("label");
         })
+        
+        if (this.modifiers != "") {
+            text += " : " + this.modifiers;
+        }
+        
         return text;
     }
     
