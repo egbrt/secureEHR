@@ -3,7 +3,7 @@ export class Info {
     {
         this.urlAPI = "//" + location.hostname;
         if (this.urlAPI.indexOf("localhost") > 0) {
-            this.urlAPI += "/his";
+            this.urlAPI += "/secureEHR";
         }
         this.urlAPI += "/portal/api.php";
         

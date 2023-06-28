@@ -4,7 +4,7 @@ var urlAPI = "";
 export function API() {
     var url = "//" + location.hostname;
     if (url.indexOf("localhost") > 0) {
-        url += "/his";
+        url += "/secureEHR";
     }
     urlAPI = url + "/api.php";
 }
