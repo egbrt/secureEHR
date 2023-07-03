@@ -47,7 +47,7 @@
 </div>
 
 <div id="visitPatientFunctioning">
-  <p class="subHeader">Functioning and Patient Goals</p>
+  <p class="subHeader">Functioning and Patient Objectives</p>
   <div class="contents"></div>
 </div>
 
