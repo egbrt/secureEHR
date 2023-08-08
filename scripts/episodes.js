@@ -66,6 +66,7 @@ export class Episodes {
             let listOfEpisodes = "<ul><li id=\"0\">Create a new episode</li></ul><hr/><ul>";
             if ((!episodes.current) || (episodes.current == 0)) {
                 if ((json.length > 0) && (json[0].name == "Notes")) {
+                    $("#visitEpisodeVisits").show();
                     episodes.current = json[0].id;
                 }
                 else {

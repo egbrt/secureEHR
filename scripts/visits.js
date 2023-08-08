@@ -131,26 +131,27 @@ export class Visits {
                     }
                 });
                 
-                $('#visitEpisodeVisits p span').click(function() {
+                $('#visitEpisodeVisits .note').click(function() {
                     let note = $(this).html();
+                    console.log("note: " + note);
                     if (note.startsWith("R ")) {
-                        contact.moveTo(RFE);
+                        visits.dashboard.contact.moveTo(RFE);
                         note = note.substr(2);
                     }
                     else if (note.startsWith("S ")) {
-                        contact.moveTo(SUBJECTIVE);
+                        visits.dashboard.contact.moveTo(SUBJECTIVE);
                         note = note.substr(2);
                     }
                     else if (note.startsWith("O ")) {
-                        contact.moveTo(OBJECTIVE);
+                        visits.dashboard.contact.moveTo(OBJECTIVE);
                         note = note.substr(2);
                     }
                     else if (note.startsWith("A ")) {
-                        contact.moveTo(ASSESSMENT);
+                        visits.dashboard.contact.moveTo(ASSESSMENT);
                         note = note.substr(2);
                     }
                     else if (note.startsWith("P ")) {
-                        contact.moveTo(PLAN);
+                        visits.dashboard.contact.moveTo(PLAN);
                         note = note.substr(2);
                     }
                     $('#visitAllFinding').val(note).keyup();
