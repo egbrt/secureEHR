@@ -9,7 +9,8 @@
 </div>
 
 <div id="visitAllFindingSet">
-    <input type="text" id="visitAllFinding" name="visitAllFinding" autofocus placeholder="Search term for ICPC-3, or free text."/>
+    <input type="text" id="visitAllFinding" name="visitAllFinding" autofocus placeholder="Choose Code (on the left), or enter free text."/>
+    <button id="codeAllFinding">Code</button>
     <button id="addAllFinding">Add</button>
     <div id="visitAllFindings"><ul></ul></div>
 </div>
@@ -70,12 +71,8 @@
 <div id="warningMedication"><p>First enter a diagnosis (under Assessment) for which the medication is intended.</p></div>
 <div id="warningExistingEpisode"><p>There already is an episode with this diagnosis. If you want, select the existing episode to add this contact to it.</p></div>
 
-<div id="icpc3-browser">
-  <div id="icpc3-legend"><button id="closeICPC3">Cancel</button></div>
-  <div id="icpc3-results"></div>
-  <div id="icpc3-details"></div>
-  <div id="icpc3-codingHint"></div>
-  <div id="icpc3-epdTexts"></div>
+<div id="icpc3-ct">
+  <iframe id="codingtool" src="https://ct.icpc-3.info" width="100%" height="100%"/>
 </div>
     
 <div id="visitDrugs"></div>

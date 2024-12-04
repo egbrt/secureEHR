@@ -198,12 +198,14 @@ export class Contact {
                 if (contact.dashboard.icpc3.getMode() == PLAN) {
                     contact.getInterventions();
                 }
+                /*  niet zinvol met coding tool
                 else if (contact.dashboard.icpc3.getMode() == OBJECTIVE) {
                     contact.dashboard.icpc3.searchCodes("-101 -102 -103 -104 -105 -106 -107 -108 -109 -110 -111 -114 -199");
                 }
                 else if (contact.dashboard.icpc3.getMode() != SURGERY) {
                     contact.dashboard.icpc3.search(contact.dashboard.icpc3.previousSearchText);
                 }
+                */
                 else {
                     contact.dashboard.icpc3.close();
                 }
@@ -239,11 +241,11 @@ export class Contact {
                    search += json[0].intervention;
                    i++;
                 }
-                contact.dashboard.icpc3.searchCodes(search + " -1 -2 -3 -5 -6");
+                //contact.dashboard.icpc3.searchCodes(search + " -1 -2 -3 -5 -6"); niet zinvol met coding tool
             })
         }
         else {
-            contact.dashboard.icpc3.searchCodes("-1 -2 -3 -5 -6");
+            //contact.dashboard.icpc3.searchCodes("-1 -2 -3 -5 -6"); niet zinvol met coding tool
         }
     }
     

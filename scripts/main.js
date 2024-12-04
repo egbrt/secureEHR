@@ -35,17 +35,13 @@ $(function() {
         $(list).toggle();
     });
     
-    $('#closeICPC3').click(function() {
-        dashboard.icpc3.close();
-    });
-    
     var to = false;
     let modes = [RFE, SUBJECTIVE, OBJECTIVE, ASSESSMENT, PLAN];
     $("#visitAllFinding").keyup(function(e) {
-        dashboard.icpc3.close();
         if (e.key == "Enter") {
             let finding = $('#visitAllFinding').val().trim();
             if (finding != "") {
+                dashboard.icpc3.close();
                 dashboard.contact.add(finding);
                 $('#visitAllFinding').val('').focus();
             }
@@ -105,12 +101,23 @@ $(function() {
                         let searchText = $('#visitAllFinding').val().trim();
                         if (searchText != dashboard.icpc3.previousSearchText) {
                             dashboard.icpc3.previousSearchText = searchText;
+                            /* don't automagically open coding tool
                             if (searchText.length > 2) {
                                 to = setTimeout(function(){dashboard.icpc3.search(searchText)}, 500);
                             }
+                            */
                         }
                     }
             }
+        }
+    });
+    
+    $('#codeAllFinding').click(function() {
+        if (dashboard.icpc3.isOpen()) {
+            dashboard.icpc3.close();
+        }
+        else {
+            dashboard.icpc3.search($('#visitAllFinding').val());
         }
     });
     
@@ -130,6 +137,15 @@ $(function() {
     $('#visitDone').click(function() {
         openPatients();
     });
+    
+    window.addEventListener("message", function(event) {
+        if ((event.origin == "https://localhost") || (event.origin.includes("ct.icpc-3.info"))) {
+            $("#visitAllFinding").val(event.data);
+            $("#visitAllFinding").focus();
+            dashboard.icpc3.close();
+        }
+    });
+
 
     dashboard.contact.show('');
 })
